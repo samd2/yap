@@ -77,6 +77,7 @@ jobs:
           MAC_OSX: ${{ matrix.mac_osx }}
           GCC_VERSION: ${{ matrix.gcc_version }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "linux"
         run: |
           echo '==================================> SETUP'
           if [ -n "$GHA_CONTAINER" ]; then
@@ -259,6 +260,7 @@ jobs:
           MAC_OSX: ${{ matrix.mac_osx }}
           GCC_VERSION: ${{ matrix.gcc_version }}
           TRAVIS_BRANCH: ${{ github.base_ref }}
+          TRAVIS_OS_NAME: "osx"
         run: |
           echo '==================================> SETUP'
           set -ex
